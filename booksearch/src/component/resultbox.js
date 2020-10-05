@@ -15,11 +15,13 @@ function ResultBox(props) {
               <div className="card" key={index}>
                 <div className="row">
                   <div className="col s12 m10 l10">
-                    <h5>{book.bookName}</h5>
+                    <h5>{book.volumeInfo.title}</h5>
                   </div>
                   <div className="col s12 m2 l2">
-                    <button className="btn" type="button" onClick={props.view}>
-                      View
+                    <button className="btn" type="button">
+                      <a href={book.volumeInfo.infoLink} className="white-text">
+                        View
+                      </a>
                     </button>
                     <button className="btn" type="button" onClick={props.save}>
                       Save
@@ -27,16 +29,19 @@ function ResultBox(props) {
                   </div>
                 </div>
                 <div className="row">
-                    <div className="col s12">
-                        Written by {book.author}    
-                    </div>
+                  <div className="col s12">
+                    Written by {book.volumeInfo.authors}
+                  </div>
                 </div>
                 <div className="row">
                   <div className="col s12 m3 l3">
-                    <img src={book.image} alt={book.title}/>
+                    <img
+                      src={book.volumeInfo.imageLinks.smallThumbnail}
+                      alt={book.volumeInfo.title}
+                    />
                   </div>
                   <div className="col s12 m9 l9">
-                    {book.discription}
+                    <p>{book.volumeInfo.description}</p>
                   </div>
                 </div>
               </div>
