@@ -15,6 +15,7 @@ function SearchBox(props) {
                   id="first_name"
                   type="text"
                   className="validate"
+                  name="searchWord"
                   ref={props.register}
                 />
                 <label htmlFor="first_name">Book</label>
