@@ -2,46 +2,7 @@ import React, { useEffect, useState } from "react";
 import services from "../services";
 
 function SavedBox() {
-  const defaultData = [
-    {
-      authors: ["OECD"],
-      imageLinks: [
-        {
-          smallThumbnail:
-            "http://books.google.com/books/content?id=YHI9W0M242gC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-          thumbnail:
-            "http://books.google.com/books/content?id=YHI9W0M242gC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        },
-      ],
-      title:
-        "OECD Guidelines for the Testing of Chemicals, Section 4 Test No. 405: Acute Eye Irritation/Corrosion",
-      infoLink:
-        "https://play.google.com/store/books/details?id=YHI9W0M242gC&source=gbs_api",
-      description:
-        "This method provides information on health hazard likely to arise from exposure to test substance (liquids, solids and aerosols) by application on the eye. This Test Guideline is intended preferably for use with albino rabbit. The test substance is ...",
-      __v: 0,
-    },
-    {
-      authors: ["OECD"],
-      imageLinks: [
-        {
-          smallThumbnail:
-            "http://books.google.com/books/content?id=YHI9W0M242gC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-          thumbnail:
-            "http://books.google.com/books/content?id=YHI9W0M242gC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        },
-      ],
-      title:
-        "OECD Guidelines for the Testing of Chemicals, Section 4 Test No. 405: Acute Eye Irritation/Corrosion",
-      infoLink:
-        "https://play.google.com/store/books/details?id=YHI9W0M242gC&source=gbs_api",
-      description:
-        "This method provides information on health hazard likely to arise from exposure to test substance (liquids, solids and aerosols) by application on the eye. This Test Guideline is intended preferably for use with albino rabbit. The test substance is ...",
-      __v: 0,
-    },
-  ];
-
-  const [savedBooks, setSavedBooks] = useState(defaultData);
+  const [savedBooks, setSavedBooks] = useState([]);
 
   const click = async (_id) => {
     try {
