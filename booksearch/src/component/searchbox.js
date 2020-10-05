@@ -7,7 +7,7 @@ function SearchBox(props) {
         <div className="card">
           <div className="card-title">Book Search</div>
           <br />
-          <form onSubmit={props.onSubmit}>
+          <form onSubmit={props.handleSubmit}>
             <div className="row">
               <div className="input-field col s12">
                 <input
