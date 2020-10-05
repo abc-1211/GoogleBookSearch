@@ -8,16 +8,16 @@ function SearchBox(props) {
           <div className="card-title">Book Search</div>
           <br />
           <form onSubmit={props.onSubmit}>
-            <div class="row">
-              <div class="input-field col s12">
+            <div className="row">
+              <div className="input-field col s12">
                 <input
                   placeholder="Harry Potter"
                   id="first_name"
                   type="text"
-                  class="validate"
+                  className="validate"
                   ref={props.register}
                 />
-                <label for="first_name">Book</label>
+                <label htmlFor="first_name">Book</label>
               </div>
             </div>
             <div className="row center">
