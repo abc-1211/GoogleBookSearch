@@ -23,7 +23,7 @@ function ResultBox(props) {
                         View
                       </a>
                     </button>
-                    <button className="btn" type="button" onClick={props.save}>
+                    <button className="btn" type="button" onClick={() => props.save(index)}>
                       Save
                     </button>
                   </div>
