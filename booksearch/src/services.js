@@ -7,5 +7,35 @@ export default {
         catch (err) {
             return err;
         }
+    },
+    getSaved: async () => {
+        try {
+            const res = await fetch(`http://localhost:8080/api/getbooks`);
+            return res.json();
+        } catch (err) {
+            return err;
+        }
+    },
+    setSaved: async (data) => {
+        try {
+            const res = await fetch(`http://localhost:8080/api/savebook`, {
+                method: "post",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            return res.json();
+        } catch (err) {
+            return err;
+        }
+    },
+    deleteSaved: async (_id) => {
+        try {
+            const res = await fetch(`http://localhost:8080/api/deletesaved/${_id}`)
+            return res.json();
+        } catch (err) {
+            return err;
+        }
     }
 }
