@@ -1,8 +1,8 @@
 # Google Books Search
-## Brief
+### Brief
 This Project intend to allow user to search book on website and allow users to save the book they like on the local machine.
 
-## Technology
+### Technology
 React
 
 MongoDB
@@ -13,7 +13,7 @@ Node js
 
 Materialize UI
 
-## Start Up
+### Start Up
 Clone repo on local machine
 
 open terminal
