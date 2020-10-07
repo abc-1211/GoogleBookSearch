@@ -14,12 +14,7 @@ Node js
 Materialize UI
 
 ### Start Up
-Clone repo on local machine
+https://homework-804e1.web.app/
 
-open terminal
-
-npm install
-
-npm start
-
-enjoy
+### Email
+chengkwanyu@yahoo.com.hk
