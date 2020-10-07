@@ -10,7 +10,7 @@ export default {
     },
     getSaved: async () => {
         try {
-            const res = await fetch(`http://localhost:8080/api/getbooks`);
+            const res = await fetch(`https://fasjoewpifapijgerpgjsreger.herokuapp.com/api/getbooks`);
             return res.json();
         } catch (err) {
             return err;
@@ -18,7 +18,7 @@ export default {
     },
     setSaved: async (data) => {
         try {
-            const res = await fetch(`http://localhost:8080/api/savebook`, {
+            const res = await fetch(`https://fasjoewpifapijgerpgjsreger.herokuapp.com/api/savebook`, {
                 method: "post",
                 body: JSON.stringify(data),
                 headers: {
@@ -32,7 +32,7 @@ export default {
     },
     deleteSaved: async (_id) => {
         try {
-            const res = await fetch(`http://localhost:8080/api/deletesaved/${_id}`)
+            const res = await fetch(`https://fasjoewpifapijgerpgjsreger.herokuapp.com/api/deletesaved/${_id}`)
             return res.json();
         } catch (err) {
             return err;
